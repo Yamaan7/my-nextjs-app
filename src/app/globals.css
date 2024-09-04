@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,17 +19,49 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #020617;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+ul {
+  gap: 75px;
+  display: flex;
+  justify-content: space-between;
+}
+
+li {
+  color: #9CA3AF;
+}
+
+li:hover {
+  color: white;
+}
+
+span {
+  color: #EAB308;
+}
+
+.contactInfo {
+  color: white;
+}
+
+input,
+textarea {
+  background-color: #1F2937;
+  padding: 15px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: white;
+}
+
+textarea {
+  width: 540px;
+  height: 166px;
 }
