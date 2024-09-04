@@ -1,3 +1,8 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable @next/next/no-img-element */
+
+
+
 "use client"; // This ensures the component is rendered on the client side
 
 import Link from 'next/link';
