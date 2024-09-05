@@ -6,7 +6,9 @@ import React from 'react';
 // Card Component
 const Card = ({ logoSrc, headerText, descriptionText }) => {
     return (
-        <div style={styles.card}>
+        <div
+            className='CardDiv'
+            style={styles.card}>
             <div style={styles.logoContainer}>
                 <img src={logoSrc} alt="Logo" style={styles.logo} />
             </div>
@@ -19,8 +21,8 @@ const Card = ({ logoSrc, headerText, descriptionText }) => {
 // Styles
 const styles = {
     card: {
-        width: '350px',
-        height: '500px',
+        // width: '350px',
+        // height: '500px',
         padding: '20px',
         backgroundColor: '#020617',
         borderRadius: '16px',

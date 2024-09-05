@@ -1,15 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 
-
-
-"use client"; // This ensures the component is rendered on the client side
+"use client";
 
 import Link from 'next/link';
 
 const Navbar = () => {
     return (
         <div style={{
+            // maxWidth: '1440px',
+            // width: '100%',
             background: '#020617',
             padding: '0 25px',
             fontFamily: 'Arial',
@@ -21,7 +21,7 @@ const Navbar = () => {
             alignItems: 'center',
             height: '64px',
         }}>
-            <div className="logo">
+            <div className="navLogo">
                 <h1>About<span style={{ color: '#EAB308' }}>Me</span></h1>
             </div>
             <nav>
@@ -32,7 +32,7 @@ const Navbar = () => {
                     padding: 0,
                     textTransform: 'uppercase',
                     fontWeight: 'normal',
-                    fontSize: '24px',
+                    // fontSize: '24px',
                 }}>
                     <li><Link href="#Homepage" >Home</Link></li>
                     <li><Link href="#About" >About</Link></li>

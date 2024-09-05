@@ -7,7 +7,9 @@ import React from 'react';
 // Card Component
 const Card2 = ({ logoSrc, headerText, descriptionText }) => {
     return (
-        <div style={styles.card}>
+        <div
+            className='CardDiv'
+            style={styles.card}>
             <div style={styles.logoContainer}>
                 <img src={logoSrc} alt="Logo" style={styles.logo} />
             </div>
@@ -20,9 +22,9 @@ const Card2 = ({ logoSrc, headerText, descriptionText }) => {
 // Styles
 const styles = {
     card: {
-        width: '350px',
-        height: '50vh',
-        padding: '32px',
+        // width: '350px',
+        // height: '50vh',
+        padding: '20px',
         // backgroundColor: '#020617',
         backgroundColor: '#111827',
         borderRadius: '16px',

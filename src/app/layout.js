@@ -13,7 +13,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body style={{
+        maxWidth: '2560px',
+        width: '100%',
+      }}>{children}</body>
     </html>
   );
 }

@@ -9,6 +9,7 @@ import Card2 from './Card2'
 const Skills = () => {
     return (
         <div id='Skills'
+            className='EducationDiv'
             style={{
                 background: '#020617',
                 display: 'flex',
@@ -16,7 +17,7 @@ const Skills = () => {
                 justifyContent: 'space-evenly',
                 alignItems: 'center',
                 textAlign: 'left',
-                padding: '96px 165px',
+                // padding: '96px 165px',
                 gap: '56px',
             }}>
             <div style={{
@@ -24,7 +25,9 @@ const Skills = () => {
                 gap: '24px',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                paddingLeft: '215px',
+                alignItems: 'center',
+                // paddingLeft: '215px',
+                textAlign: 'center',
             }}>
                 <h1 style={{
                     color: 'white',
@@ -35,22 +38,27 @@ const Skills = () => {
                     color: '#EAB308',
                 }}>Skills</span></h1>
                 <h2 style={{
-                    width: '50%',
+                    width: '100%',
                     fontSize: '20px',
                     fontWeight: 'normal',
                     lineHeight: '27px',
                     color: '#6B7280',
+
                 }}>Skilled in front-end development with expertise in HTML, CSS, JavaScript, TypeScript, React, and Next.js; experienced in state management with Redux and Zustand, API integration, and design with Figma.</h2>
             </div>
 
 
-            <div style={{
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                gap: '50px',
-            }}>
+            <div
+                className='CardsContainer'
+                style={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    // flexDirection: 'row',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    gap: '25px',
+                    width: '100%',
+                }}>
                 <Card2
                     logoSrc="/Frame1.png"
                     headerText="Front-End Development"

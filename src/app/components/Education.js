@@ -8,7 +8,9 @@ import Card from './Card'
 
 const Education = () => {
     return (
-        <div id='Education'
+        <div
+            className='EducationDiv'
+            id='Education'
             style={{
                 background: '#111827',
                 display: 'flex',
@@ -16,7 +18,7 @@ const Education = () => {
                 justifyContent: 'space-evenly',
                 alignItems: 'center',
                 textAlign: 'left',
-                padding: '96px 165px',
+                // padding: '96px 165px',
                 gap: '56px',
             }}>
             <div style={{
@@ -24,33 +26,40 @@ const Education = () => {
                 gap: '24px',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                paddingLeft: '215px',
+                alignItems: 'center',
+                // paddingLeft: '215px',
             }}>
                 <h1 style={{
                     color: 'white',
                     fontSize: '42px',
                     fontWeight: 'bold',
                     lineHeight: '64px',
+                    textAlign: 'center',
                 }}>My <span style={{
                     color: '#EAB308',
                 }}>Education</span></h1>
                 <h2 style={{
-                    width: '50%',
+                    width: '100%',
                     fontSize: '20px',
                     fontWeight: 'normal',
                     lineHeight: '27px',
                     color: '#6B7280',
+                    textAlign: 'center',
                 }}>Completed foundational education at Iqra School (2013-2017), advanced studies in Computer Science at Islamia College (2017-2019), and earned a BS in Software Engineering from Islamia University (2019-2023).</h2>
             </div>
 
 
-            <div style={{
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                gap: '50px',
-            }}>
+            <div
+                className='CardsContainer'
+                style={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    // flexDirection: 'row',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    gap: '25px',
+                    width: '100%',
+                }}>
                 <Card
                     logoSrc="/iqraMardan.jpg"
                     headerText="Iqra School Katlang Road Mardan"

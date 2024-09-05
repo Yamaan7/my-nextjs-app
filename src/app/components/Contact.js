@@ -8,6 +8,7 @@ import React from 'react'
 const Contact = () => {
     return (
         <div
+            className='contactContainer'
             id='Contact'
             style={{
                 display: 'flex',
@@ -35,15 +36,19 @@ const Contact = () => {
                     <h3 style={{
                         fontSize: '20px',
                         color: '#9CA3AF',
+                        textAlign: 'center',
+                        width: '100%',
                     }}>Feel free to reach out to me for any web development inquiries or opportunities—I'd love to connect and collaborate!</h3>
                 </div>
 
-                <div style={{
-                    display: 'flex',
-                    justifyContent: 'space-around',
-                    alignItems: 'stretch',
-                    marginTop: '56px',
-                }}>
+                <div
+                    className='contactDiv'
+                    style={{
+                        display: 'flex',
+                        // justifyContent: 'space-around',
+                        // alignItems: 'stretch',
+                        marginTop: '56px',
+                    }}>
                     <div className='contactInfo' style={{
                         width: '347px',
                         display: 'flex',
@@ -54,13 +59,18 @@ const Contact = () => {
                         <h2><span>Phone:</span> 03332248323</h2>
                         <h2><span>Email:</span> yamaanmuhammad@gmail.com</h2>
                     </div>
-                    <div style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'space-evenly',
-                        gap: '25px',
-                    }}>
-                        <input type="text" placeholder='Name' />
+
+
+                    <div
+                        className='ContactInputs'
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            // justifyContent: 'space-evenly',
+                            gap: '25px',
+                        }}>
+                        <input type="text" placeholder='Name'
+                            className='nameInput' />
                         <textarea name="message" id="message" placeholder='Message' ></textarea>
                         <button style={{
                             width: '145px',
@@ -72,7 +82,6 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-            <div></div>
         </div>
     )
 }

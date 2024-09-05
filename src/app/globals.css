@@ -28,11 +28,7 @@ body {
   }
 }
 
-ul {
-  gap: 75px;
-  display: flex;
-  justify-content: space-between;
-}
+
 
 li {
   color: #9CA3AF;
@@ -59,9 +55,4 @@ textarea {
 input::placeholder,
 textarea::placeholder {
   color: white;
-}
-
-textarea {
-  width: 540px;
-  height: 166px;
 }

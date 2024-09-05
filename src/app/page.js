@@ -10,6 +10,7 @@ import Education from "./components/Education";
 import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import "./components/styles/styles.scss";
 
 
 export default function Home() {
