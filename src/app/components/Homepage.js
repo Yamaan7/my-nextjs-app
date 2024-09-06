@@ -12,9 +12,9 @@ export default function Homepage() {
             style={{
                 background: '#111827',
                 display: 'flex',
-                justifyContent: 'space-evenly',
+                // justifyContent: 'space-evenly',
                 alignItems: 'center',
-                textAlign: 'left',
+                // textAlign: 'left',
                 // padding: '96px 165px',
             }}>
             <div
@@ -23,8 +23,8 @@ export default function Homepage() {
                     color: 'white',
                     display: 'flex',
                     flexDirection: 'column',
-                    textAlign: 'left',
-                    width: '466px',
+                    // textAlign: 'left',
+                    // width: '466px',
                     // gap: '24px',
                 }}>
                 <h3
@@ -59,7 +59,11 @@ export default function Homepage() {
             </div>
 
             <div>
-                <img src="/profileImage.jpg" style={{ borderRadius: '24px' }} className='heroImage' />
+                <img src="/profileImage.jpg" style={{
+                    borderRadius: '24px',
+                    transition: 'all 0.3s ease', /* Smooth transition for hover effects */
+                    overflow: 'hidden', /* For neat appearance if content overflows */
+                }} className='heroImage' />
             </div>
         </div>
     )

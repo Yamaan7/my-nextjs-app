@@ -2,7 +2,6 @@
 /* eslint-disable @next/next/no-img-element */
 
 
-
 import React from 'react'
 
 const AboutMe = () => {
@@ -33,7 +32,10 @@ const AboutMe = () => {
 
             <div className="rectangle">
                 <img src="/Rectangle.png" alt="Rectangle" className="rectangle-image" />
-                <img src="/profileImage2.jpg" alt="Profile Image" className="profile-image" />
+                <img src="/profileImage2.jpg" alt="Profile Image" className="profile-image heroImage" style={{
+                    transition: 'all 0.3s ease', /* Smooth transition for hover effects */
+                    overflow: 'hidden', /* For neat appearance if content overflows */
+                }} />
             </div>
 
 

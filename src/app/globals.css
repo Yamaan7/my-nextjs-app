@@ -35,7 +35,8 @@ li {
 }
 
 li:hover {
-  color: white;
+  color: #EAB308;
+  /* border-bottom: 1px solid #EAB308; */
 }
 
 span {
@@ -62,6 +63,11 @@ ul {
   display: flex;
   justify-content: space-between;
   font-size: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
 @media (max-width: 1280px) {
@@ -74,25 +80,53 @@ ul {
 @media (max-width: 930px) {
   ul {
     gap: 40px;
-    font-size: 12px;
+    font-size: 15px;
   }
 }
 
 @media (max-width: 768px) {
   ul {
     gap: 20px;
-    font-size: 12px;
+    font-size: 15px;
   }
 }
 
 @media (max-width: 615px) {
+  .hamburger {
+    display: block;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+
   ul {
-    gap: 10px;
-    font-size: 10px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #020617;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  ul.open {
+    display: flex;
+  }
+
+  ul li {
+    padding: 15px;
+    border-bottom: 1px solid #1F2937;
+  }
+
+  ul li:last-child {
+    border-bottom: none;
   }
 }
 
-@media (max-width: 425px) {
+/* @media (max-width: 425px) {
   ul {
     gap: 5px;
     font-size: 9px;
@@ -104,7 +138,9 @@ ul {
     gap: 5px;
     font-size: 8px;
   }
-}
+} */
+
+
 
 .navLogo {
   font-size: 40px;
@@ -142,16 +178,35 @@ ul {
   }
 }
 
+@media (max-width: 768px) {
+  .heroPara {
+    font-size: 16px;
+    line-height: 20px;
+    margin-right: 0px;
+  }
+}
+
 @media (max-width: 425px) {
   .heroPara {
-    font-size: 10px;
-    line-height: 10px;
-    margin-right: 50px;
+    font-size: 13px;
+    line-height: 15px;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 375px) {
+  .heroPara {
+    font-size: 12px;
+    line-height: 14px;
+    margin-right: 0px;
   }
 }
 
 .heroDiv {
   padding: 96px 165px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: left;
 }
 
 @media (max-width: 1024px) {
@@ -162,20 +217,34 @@ ul {
 
 @media (max-width: 768px) {
   .heroDiv {
-    padding: 50px 50px;
+    padding: 100px 25px;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    text-align: center;
   }
 }
 
 @media (max-width: 425px) {
   .heroDiv {
-    padding: 30px 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 }
 
-/* .heroImage { */
-/* width: 427px;
-  height: 427px; */
-/* } */
+@media (max-width: 375px) {
+  .heroDiv {
+    margin-top: 50px;
+    margin-bottom: 0px;
+    padding-top: 100px;
+    padding-bottom: 25px;
+  }
+}
+
+/* .heroImage {
+  transition: all 0.3 ease;
+  overflow: hidden;
+} */
 
 @media (max-width: 1024px) {
   .heroImage {
@@ -185,16 +254,21 @@ ul {
 
 @media (max-width: 425px) {
   .heroImage {
-    width: 300px;
+    width: 215px;
     height: 265px;
   }
 }
 
 @media (max-width: 375px) {
   .heroImage {
-    width: 300px;
+    width: 200px;
     height: 225px;
   }
+}
+
+.heroImage:hover {
+  transform: translateY(-15px);
+  cursor: pointer;
 }
 
 .heroName {
@@ -221,11 +295,39 @@ ul {
 
 .heroText {
   gap: 24px;
+  text-align: left;
+  width: 466px;
+}
+
+@media (max-width: 768px) {
+  .heroText {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media (max-width: 425px) {
   .heroText {
     gap: 12px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    padding: 0%;
+    width: 385px;
+  }
+}
+
+@media (max-width: 375px) {
+  .heroText {
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    padding: 0%;
+    width: 300px;
   }
 }
 
@@ -293,6 +395,7 @@ ul {
 .CardDiv {
   width: 350px;
   height: 500px;
+  border: 2px solid transparent;
 }
 
 @media (max-width: 1024px) {
@@ -300,6 +403,12 @@ ul {
     width: 300px;
     height: 500px;
   }
+}
+
+.CardDiv:hover {
+  transform: translateY(-10px);
+  border: 2px dashed #EAB308;
+  cursor: pointer;
 }
 
 .contactDiv {
@@ -382,6 +491,7 @@ textarea {
   width: 415px;
   height: 510px;
   position: relative;
+  display: block;
 }
 
 @media (max-width: 1024px) {
@@ -394,6 +504,7 @@ textarea {
   .rectangle {
     width: 400px;
     height: 465px;
+    display: none;
   }
 }
 
@@ -500,4 +611,15 @@ textarea {
   .textAlignDiv {
     width: 280px;
   }
+}
+
+.scrollButton:hover {
+  background-color: #ff9800;
+  /* Change background color on hover */
+  color: #fff;
+  /* Change text color */
+  transform: scale(1.2);
+  /* Slightly enlarge the button */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  /* Add shadow for depth */
 }

@@ -35,6 +35,8 @@ const styles = {
         justifyContent: 'space-evenly',
         padding: '20px',
         boxSizing: 'border-box',
+        transition: 'all 0.3s ease', /* Smooth transition for hover effects */
+        overflow: 'hidden', /* For neat appearance if content overflows */
     },
     logoContainer: {
         width: '100%',

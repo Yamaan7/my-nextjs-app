@@ -3,13 +3,29 @@
 
 "use client";
 
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth <= 615);
+        };
+
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
     return (
         <div style={{
-            // maxWidth: '1440px',
-            // width: '100%',
+            width: '100%',
             background: '#020617',
             padding: '0 25px',
             fontFamily: 'Arial',
@@ -20,26 +36,26 @@ const Navbar = () => {
             justifyContent: 'space-between',
             alignItems: 'center',
             height: '64px',
+            position: 'fixed',
+            // width: '100%',
+            zIndex: 50,
         }}>
             <div className="navLogo">
                 <h1>About<span style={{ color: '#EAB308' }}>Me</span></h1>
             </div>
             <nav>
-                <ul style={{
-                    listStyle: 'none',
-                    display: 'flex',
-                    margin: 0,
-                    padding: 0,
-                    textTransform: 'uppercase',
-                    fontWeight: 'normal',
-                    // fontSize: '24px',
-                }}>
-                    <li><Link href="#Homepage" >Home</Link></li>
-                    <li><Link href="#About" >About</Link></li>
-                    <li><Link href="#Education" >Education</Link></li>
-                    <li><Link href="#Skills" >Skills</Link></li>
-                    <li><Link href="#Experience" >Experience</Link></li>
-                    <li><Link href="#Contact" >Contact</Link></li>
+                {isMobile && (
+                    <button onClick={toggleMenu} className="hamburger">
+                        ☰
+                    </button>
+                )}
+                <ul className={`menu ${isMenuOpen ? 'open' : ''}`}>
+                    <li><Link href="#Homepage">Home</Link></li>
+                    <li><Link href="#About">About</Link></li>
+                    <li><Link href="#Education">Education</Link></li>
+                    <li><Link href="#Skills">Skills</Link></li>
+                    <li><Link href="#Experience">Experience</Link></li>
+                    <li><Link href="#Contact">Contact</Link></li>
                 </ul>
             </nav>
         </div>
