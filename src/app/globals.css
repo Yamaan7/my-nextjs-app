@@ -227,14 +227,14 @@ ul {
 
 @media (max-width: 425px) {
   .heroDiv {
-    margin-top: 50px;
+    margin-top: 0px;
     margin-bottom: 50px;
   }
 }
 
 @media (max-width: 375px) {
   .heroDiv {
-    margin-top: 50px;
+    margin-top: 00px;
     margin-bottom: 0px;
     padding-top: 100px;
     padding-bottom: 25px;
@@ -622,4 +622,86 @@ textarea {
   /* Slightly enlarge the button */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   /* Add shadow for depth */
+}
+
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #1F2937;
+  color: #fff;
+  padding: 30px 0;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 25px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px 0;
+}
+
+.footer-section h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: #eab308;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #bbb;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons li {
+  margin: 0 10px;
+}
+
+.social-icons li a {
+  color: #eab308;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.social-icons li a:hover {
+  color: #fff;
+  text-decoration: underline;
 }
