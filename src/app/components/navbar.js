@@ -23,6 +23,12 @@ const Navbar = () => {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
+    // Function to close the menu after clicking a link
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
+
     return (
         <div style={{
             width: '100%',
@@ -37,7 +43,6 @@ const Navbar = () => {
             alignItems: 'center',
             height: '64px',
             position: 'fixed',
-            // width: '100%',
             zIndex: 50,
         }}>
             <div className="navLogo">
@@ -50,12 +55,13 @@ const Navbar = () => {
                     </button>
                 )}
                 <ul className={`menu ${isMenuOpen ? 'open' : ''}`}>
-                    <li><Link href="#Homepage">Home</Link></li>
-                    <li><Link href="#About">About</Link></li>
-                    <li><Link href="#Education">Education</Link></li>
-                    <li><Link href="#Skills">Skills</Link></li>
-                    <li><Link href="#Experience">Experience</Link></li>
-                    <li><Link href="#Contact">Contact</Link></li>
+                    {/* Close the menu when a link is clicked */}
+                    <li><Link href="#Homepage" onClick={closeMenu}>Home</Link></li>
+                    <li><Link href="#About" onClick={closeMenu}>About</Link></li>
+                    <li><Link href="#Education" onClick={closeMenu}>Education</Link></li>
+                    <li><Link href="#Skills" onClick={closeMenu}>Skills</Link></li>
+                    <li><Link href="#Experience" onClick={closeMenu}>Experience</Link></li>
+                    <li><Link href="#Contact" onClick={closeMenu}>Contact</Link></li>
                 </ul>
             </nav>
         </div>
